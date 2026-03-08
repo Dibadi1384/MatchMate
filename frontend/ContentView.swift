@@ -2,65 +2,39 @@
 //  ContentView.swift
 //  MatchMate
 //
-//  Created by Jason Chen on 2026-03-07.
-//
-
-/*
- 
-TODO:
- Load-in Page
- Login Page
- Home Page
- Profile
- Matching Query/Questionaire (with optionalities)
- Chats list
- DataUpload (temporary for development)
- Loading Screen
- Match Results/Suggestions
- Chat with match
- Post match review/questionaire
-
- 
- */
 
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        
-        ZStack {
-            Color("AppCream")
-                .ignoresSafeArea()
-            
-            VStack {
-                
+    @EnvironmentObject var appState: AppState
+    @State private var authPath = NavigationPath()
 
-                Image("Icon")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 250, height: 250)
-                    .foregroundStyle(.tint)
-                
-                //offset(y: -50)
-                //.padding(.top, -100)
-                Text("MatchMate")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .offset(y: -50)
-                
-                Text("Behavior-Based Social Matching")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .offset(y: -50)
-                
-                
-                
+    var body: some View {
+        Group {
+            if appState.isLoggedIn {
+                HomeView()
+            } else {
+                NavigationStack(path: $authPath) {
+                    WelcomeView(path: $authPath)
+                        .navigationDestination(for: AuthStep.self) { step in
+                            switch step {
+                            case .signUp:
+                                SignUpView(path: $authPath)
+                            case .login:
+                                LoginView(path: $authPath)
+                            case .profileCreation:
+                                ProfileCreationView(path: $authPath)
+                            case .dataUpload:
+                                DataUploadView(path: $authPath)
+                            }
+                        }
+                }
             }
-            .padding()
         }
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(AppState())
 }
