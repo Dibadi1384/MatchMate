@@ -6,7 +6,7 @@ import json
 import csv
 import argparse
 from pathlib import Path
-
+#test
 from stop_words import strip_stop_words
 
 MAPS_PLACES_LIMIT = 2000
