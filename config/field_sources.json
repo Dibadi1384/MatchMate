@@ -1,0 +1,121 @@
+{
+  "user_id": {
+    "best_source": "Google sign-in / app user id",
+    "data_sources": []
+  },
+  "location": {
+    "best_source": "Maps activity, starred places, reviews; calendar places",
+    "data_sources": ["maps", "calendar"]
+  },
+  "hobbies": {
+    "best_source": "Chrome history, Search activity, YouTube activity",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "sports": {
+    "best_source": "YouTube/Search plus optional Fit; weak without Fit",
+    "data_sources": ["youtube"],
+    "inference_strength": "weak_without_fit"
+  },
+  "entertainment_interests": {
+    "best_source": "YouTube, Search, Chrome",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "music_taste": {
+    "best_source": "YouTube Music, YouTube activity",
+    "data_sources": ["youtube"]
+  },
+  "fitness_health": {
+    "best_source": "Fit data when available; otherwise weak from activity",
+    "data_sources": [],
+    "inference_strength": "weak_without_fit"
+  },
+  "lifestyle": {
+    "best_source": "Calendar, Maps, Chrome (patterns)",
+    "data_sources": ["calendar", "maps", "chrome"]
+  },
+  "favorite_cuisine": {
+    "best_source": "Maps reviews, saved places, search",
+    "data_sources": ["maps"]
+  },
+  "job_occupation": {
+    "best_source": "Weak inference from search, history, calendar",
+    "data_sources": ["chrome", "youtube", "calendar"],
+    "inference_strength": "weak"
+  },
+  "education": {
+    "best_source": "Weak inference from search, history, calendar",
+    "data_sources": ["chrome", "youtube", "calendar"],
+    "inference_strength": "weak"
+  },
+  "fashion": {
+    "best_source": "Weak inference from Search, Chrome, YouTube",
+    "data_sources": ["chrome", "youtube"],
+    "inference_strength": "weak"
+  },
+  "social_energy": {
+    "best_source": "Weak inference from calendar density, maps outings",
+    "data_sources": ["calendar", "maps"],
+    "inference_strength": "weak"
+  },
+  "humor_style": {
+    "best_source": "Weak inference from YouTube, Search, Chrome",
+    "data_sources": ["chrome", "youtube"],
+    "inference_strength": "weak"
+  },
+  "age_range": {
+    "best_source": "Inferred from content; no direct source",
+    "data_sources": ["chrome", "youtube", "calendar", "maps"]
+  },
+  "culture_ethnic_background": {
+    "best_source": "Inferred from content and locations",
+    "data_sources": ["chrome", "youtube", "maps"]
+  },
+  "religious_beliefs": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "political_takes": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "languages_spoken": {
+    "best_source": "Inferred from content and locations",
+    "data_sources": ["chrome", "youtube", "maps"]
+  },
+  "relationship_status": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube", "calendar"]
+  },
+  "personality_type": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "communication_style": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "values": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "life_goals": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube", "calendar"]
+  },
+  "dating_intentions": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "love_language": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "dealbreakers": {
+    "best_source": "Inferred from content",
+    "data_sources": ["chrome", "youtube"]
+  },
+  "self_description": {
+    "best_source": "Inferred from full profile",
+    "data_sources": ["chrome", "youtube", "calendar", "maps"]
+  }
+}

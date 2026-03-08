@@ -1,0 +1,5 @@
+# No dependencies for SQLite + extraction pipeline (uses built-in sqlite3).
+
+# For Gemini profile prediction (predict_profile_gemini.py):
+google-genai>=1.0.0
+python-dotenv>=1.0.0

@@ -1,0 +1,8 @@
+user-data/
+matchmate/
+matchmate.db
+.env
+
+# Built/exported data (can contain tokens from browser history)
+compact_json/
+extracted_*.json
